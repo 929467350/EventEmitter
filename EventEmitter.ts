@@ -1,10 +1,11 @@
 type EventType = string | symbol;
 type Handler<T = any> = (event?: T) => void;
 interface Emitter {
-    on<T = any>(type: EventType, handler: Handler<T>): void;
-    once<T = any>(type: EventType, handler: Handler<T>): void;
-    off<T = any>(type: EventType, handler: Handler<T>): void;
+    clear(): void;
     emit<T = any>(type: EventType, event?: T): void;
+    on<T = any>(type: EventType, handler: Handler<T>): void;
+    off<T = any>(type: EventType, handler: Handler<T>): void;
+    once<T = any>(type: EventType, handler: Handler<T>): void;
 }
 
 class EventEmitter implements Emitter {
