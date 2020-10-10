@@ -1,5 +1,5 @@
 # EventEmitter
-### 引入并初始化
+### 引入并初始化 然后打开开发者模式查看控制台
 <pre><code>   
     var event = new EventEmitter();
     event.on( 'login', function ( data ) {
